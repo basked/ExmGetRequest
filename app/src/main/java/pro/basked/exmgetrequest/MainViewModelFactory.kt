@@ -6,8 +6,8 @@ import pro.basked.exmgetrequest.repository.Repository
 
 class MainViewModelFactory(
     private val repository: Repository
-    ) : ViewModelProvider.Factory {
+) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-       return MainViewModel(repository) as T
+        return MainViewModel(repository) as T
     }
 }
