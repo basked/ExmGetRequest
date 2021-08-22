@@ -32,10 +32,13 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Responce", response.body()?.body!!)
 
 
-                binding.txtView.text = response.body()?.title!!
+                binding.tvId.text =  response.body()?.id.toString()
+                binding.tvTitle.text = response.body()?.title!!
+                binding.tvBody.text = response.body()?.body!!
+
             } else {
 
-                binding.txtView.text = response.errorBody().toString()
+                binding.tvTitle.text = response.errorBody().toString()
                 Log.d("Response", response.errorBody().toString())
             }
         })
